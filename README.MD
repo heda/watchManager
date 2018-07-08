@@ -1,4 +1,8 @@
-## Watch Manager
-# Kill tomcat server on mac os
+# Watch Manager
+## Install
+mvn instakll
+## Run
+mvn spring-boot:run
+## Kill tomcat server on mac os
 netstat -vanp tcp | grep 8080
 kill -9 PID
