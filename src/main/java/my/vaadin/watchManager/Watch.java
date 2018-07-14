@@ -16,20 +16,40 @@ public class Watch implements Serializable {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private long id;
+	private Long id;
 	
 	@Column(name = "model")
 	private String model;
 	
 	@Column(name = "reference")
 	private String reference;
-	
+
 	protected Watch() {
 		
 	}
 	
 	public Watch(String model, String reference) {
 		this.model = model;
+		this.reference = reference;
+	}
+	
+	public Long getId() {
+        return id;
+    }
+	
+	public String getModel() {
+		return model;
+	}
+	
+	public void setModel(String model) {
+		this.model = model;
+	}
+	
+	public String getReference() {
+		return reference;
+	}
+
+	public void setReference(String reference) {
 		this.reference = reference;
 	}
 	
