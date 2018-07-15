@@ -1,5 +1,6 @@
-package my.vaadin.watchManager;
+package my.vaadin.ui;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.StringUtils;
 
 import com.vaadin.server.FontAwesome;
@@ -11,6 +12,9 @@ import com.vaadin.ui.HorizontalLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.UI;
 import com.vaadin.ui.VerticalLayout;
+
+import my.vaadin.backend.WatchRepository;
+import my.vaadin.backend.data.entity.Watch;
 
 @SpringUI
 public class VaadinUI extends UI {
@@ -31,6 +35,7 @@ public class VaadinUI extends UI {
 	private final Label headerComment;
 	
 	@SuppressWarnings("deprecation")
+	@Autowired
 	public VaadinUI(WatchRepository watchRepo) {
 		this.watchRepo = watchRepo;
 		this.watchGrid = new Grid<>(Watch.class);

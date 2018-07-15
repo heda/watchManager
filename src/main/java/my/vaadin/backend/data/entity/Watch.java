@@ -1,4 +1,4 @@
-package my.vaadin.watchManager;
+package my.vaadin.backend.data.entity;
 
 import java.io.Serializable;
 
