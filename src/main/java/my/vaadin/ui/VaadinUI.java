@@ -3,7 +3,6 @@ package my.vaadin.ui;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.StringUtils;
 
-import com.vaadin.server.FontAwesome;
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.spring.annotation.SpringUI;
 import com.vaadin.ui.Button;
@@ -34,12 +33,11 @@ public class VaadinUI extends UI {
 	
 	private final Label headerComment;
 	
-	@SuppressWarnings("deprecation")
 	@Autowired
 	public VaadinUI(WatchRepository watchRepo) {
 		this.watchRepo = watchRepo;
 		this.watchGrid = new Grid<>(Watch.class);
-		this.addNewBtn = new Button("New Watch", FontAwesome.PLUS);
+		this.addNewBtn = new Button("New Watch");
 		this.headerLabel = new Label("The Ultimate Watch Manager 0.1");
 		this.headerComment = new Label("for Vaadin 8");
 	}
