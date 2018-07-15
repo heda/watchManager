@@ -19,6 +19,7 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <java.version>1.8</java.version>
+    <vaadin.version>8.4.1</vaadin.version>
   </properties>
   
   <dependencyManagement>
@@ -26,7 +27,7 @@
 			<dependency>
 				<groupId>com.vaadin</groupId>
 				<artifactId>vaadin-bom</artifactId>
-				<version>8.0.0</version>
+				<version>${vaadin.version}</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
